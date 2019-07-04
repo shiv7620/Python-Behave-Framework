@@ -1,0 +1,7 @@
+selenium
+jsonpath
+excel
+behave
+allure-behave
+pyassert
+requests

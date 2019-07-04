@@ -1,0 +1,39 @@
+Steps to use:
+
+1. Ensure you have python and pip installed on your system
+2. Open CMD & Run pip install behave
+3. Run pip install -r requirement.text
+
+To run UI Tests:
+
+    For Default Junit reports-
+        behave --no-capture -f plain --format=json -o reports/report.log --junit ./features/api
+
+    For allure compatible reports-
+        behave -f allure_behave.formatter:AllureFormatter -o testResultsAllure ./features/api
+
+        To view allure report - install allure on your system
+            allure generate allureResults -o testResultsAllure
+
+        To publish allure report whole project use - install allure on any server location
+            copy allure reports on any path on server
+            allure serve testResultsAllure
+
+-----------------------------------------------------------------------
+Work completed:
+    1. Basic API testing framework
+    2. Parametrization from feature file
+
+Next Improvements planned:
+
+    0. Behave configuration file - Behave.ini
+    1. Improvement in API testing framework - better assertions, response validator ,
+    2. Performance testing for APIs
+    3. UI tests under same framework
+    4. SSH upload allure report on remote server and publish new & old reports
+    5. Execution as docker-images
+
+Current Issues:
+    1. Restructuring UI page objects
+    2. Locator strategy for managing UI elements
+    3. Effecient use of hooks / environments.py
